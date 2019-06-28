@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+ <bean class="com.test.di.Address" id="adr"> 
+    
+      <property name="country" value="Nepal" />
+      <property name="city" value="Ktm" />
+      <property name="state" value="state-3" />
+      
+      </bean>
+
+	<bean class="com.test.di.Student" id="stud" autowire="byName">
+
+
+		<constructor-arg value="111" />
+		<constructor-arg value="20" />
+		<constructor-arg value="Himal" />
+		<constructor-arg value="Pahad" />
+		<constructor-arg ref="adr"/>
+
+    </bean>
+    
+    
+   
+
+<!-- Injecting a bean to another bean , use ref instead of value-->
+
+       <bean class="com.test.di.User" id="user"> 
+    
+      <property name="id" value="555" />
+      <property name="name" value="Bimal Raj " />
+      <property name="address" ref="adr" />
+      
+      </bean>
+       
+
+</beans>
