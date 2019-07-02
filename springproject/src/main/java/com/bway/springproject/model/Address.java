@@ -13,6 +13,8 @@ public class Address {
 	@GeneratedValue
 	private int id;
 	private String country;
+	private String city;
+	private String state;
 
 	@Override
 	public String toString() {
@@ -51,7 +53,6 @@ public class Address {
 		this.state = state;
 	}
 
-	private String city;
-	private String state;
+	
 
 }
