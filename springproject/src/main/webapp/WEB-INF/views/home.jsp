@@ -10,7 +10,8 @@
 
 <h1>Home Page</h1>
 
-<p> Welcome : ${user}</p>
+<p> Welcome : ${user} </p>
+<p>${employee }</p>
 
 </body>
 </html>

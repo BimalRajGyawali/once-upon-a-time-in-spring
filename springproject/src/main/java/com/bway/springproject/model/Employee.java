@@ -2,6 +2,7 @@ package com.bway.springproject.model;
 
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -27,7 +28,7 @@ public class Employee {
 	private double salary;
 	private String email;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL) // employee bata address delete huda address table bata ni delete hunxa 
 	@JoinColumn(name="adrid")
 	private Address address;
 
