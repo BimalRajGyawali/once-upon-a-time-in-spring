@@ -1,2 +1,3 @@
 # Spring
-This is repository contains Spring Framework applications.
+I created this repo when I started learning spring. It contains basic concepts , programs and xml configuration files.
+
